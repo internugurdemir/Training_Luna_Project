@@ -1,0 +1,25 @@
+﻿@model Training_Luna_Project.Data.Models.LoginVM
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Login</h1>
+
+<form asp-controller="Access" asp-action="Login" method="post">
+        <div class="form-group">
+        <label for="exampleInputUserName">UserName</label>
+        <input type="UserName" class="form-control" id="UserName" aria-describedby="UserName" placeholder="Enter UserName" asp-for="UserName">
+        <small id="UserName" class="form-text text-muted">We'll never share your UserName with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" asp-for="Password">
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" asp-for="KeepLoggedIn">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
